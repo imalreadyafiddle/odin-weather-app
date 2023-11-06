@@ -3,11 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odin Weather App</title>
+    <title>Howzuh Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./main.js"></script>
   </head>
   <body>
-    Let's get started. :)
+    <main>
+      <h1 class="fancy">Howzuh</h1>
+      <div class="controls" id="controls">
+        <div class="temp-switch" id="tempSwitch">Temp Switch Here</div>
+        <div class="search-bar" id="searchBar">
+          <label for="locationSearch" class="fancy" id="searchLabel"
+            >Howzuh weather in
+          </label>
+          <input
+            type="text"
+            class="location-search fancy"
+            name="location-search"
+            id="locationSearch"
+          />
+          <button class="search-go" id="searchGo">
+            <span class="fancy" id="searchLabel">?</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="current" id="current">
+        <ul class="temperature" id="temperature">
+          Temperature
+          <li class="actual-temp" id="actualTemp">Actual: 69º</li>
+          <li class="feels-temp" id="feelsTemp">Feels Like: 70º</li>
+          <li class="high-temp" id="highTemp">High: 95º</li>
+          <li class="low-temp" id="lowTemp">Low: 50º</li>
+        </ul>
+        <ul class="condition" id="condition">
+          Conditions
+          <li class="condition-image" id="conditionImage">
+            <img
+              src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+              alt="Sunny Image"
+            />
+          </li>
+          <li class="condition-text" id="conditionText">Sunny</li>
+          <li class="air-quality" id="airQuality">AQI: 50</li>
+          <li class="uv-index" id="uvIndex">UV: 5</li>
+        </ul>
+        <ul class="wind" id="wind">
+          Wind
+          <li class="wind-speed" id="windSpeed">Speed: 2.2 mph</li>
+          <li class="wind-direction" id="windDirection">Direction: 33º NNE</li>
+        </ul>
+        <ul class="precip" id="precip">
+          Precipitation
+          <li class="precip-amt" id="precipAmt">Amount: 2 in</li>
+          <li class="precip-press" id="precipPress">Pressure: 30.03 in</li>
+        </ul>
+      </div>
+      <div class="forecast" id="forecast">
+        <span class="forecast-label">Three Day Forecast</span>
+        <ul class="forecast-day" id="forecastDayOne">
+          Today
+          <li class="forecast-date" id="forecastDateOne">Nov 6</li>
+          <li class="forecast-condition" id="forecastConditionOne">
+            <img
+              src="https://cdn.weatherapi.com/weather/64x64/day/113.png"
+              alt="Sunny Image"
+            />
+          </li>
+          <li class="forecast-high" id="forecastHighOne">High: 90º</li>
+          <li class="forecast-low" id="forecastLowOne">Low: 70º</li>
+          <li class="forecast-uv" id="forecastUvOne">UV: 5</li>
+        </ul>
+        <ul class="forecast-day" id="forecastDayTwo">
+          Tomorrow
+          <li class="forecast-date" id="forecastDateTwo">Nov 7</li>
+          <li class="forecast-condition" id="forecastConditionTwo">
+            <img
+              src="https://cdn.weatherapi.com/weather/64x64/day/116.png"
+              alt="Sunny Image"
+            />
+          </li>
+          <li class="forecast-high" id="forecastHighTwo">High: 85º</li>
+          <li class="forecast-low" id="forecastLowTwo">Low: 65º</li>
+          <li class="forecast-uv" id="forecastUvTwo">UV: 5</li>
+        </ul>
+        <ul class="forecast-day" id="forecastDayThree">
+          Thursday
+          <li class="forecast-date" id="forecastDateThree">Nov 8</li>
+          <li class="forecast-condition" id="forecastConditionThree">
+            <img
+              src="https://cdn.weatherapi.com/weather/64x64/day/293.png"
+              alt="Sunny Image"
+            />
+          </li>
+          <li class="forecast-high" id="forecastHighThree">High: 80º</li>
+          <li class="forecast-low" id="forecastLowThree">Low: 60º</li>
+          <li class="forecast-uv" id="forecastUvThree">UV: 5</li>
+        </ul>
+      </div>
+    </main>
   </body>
 </html>

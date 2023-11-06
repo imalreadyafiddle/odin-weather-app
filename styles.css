@@ -1,1 +1,321 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* we make it pretty here */
+
+:root {
+  --nps-yellow: #eed202;
+  --nps-dark-green: #213a1b;
+  --nps-green: #56903a;
+  --nps-brown: #6f4930;
+  --nps-light-brown: #c56c39;
+  --nps-blue: #bae5f9;
+  --near-black: rgb(20, 20, 20);
+  --near-white: rgb(200, 200, 200);
+}
+
+* {
+  background-color: var(--nps-dark-green);
+  color: var(--near-white);
+  /* outline: solid 1px var(--near-white); */
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+  color: var(--nps-yellow);
+  text-align: center;
+  background-color: var(--nps-brown);
+  width: fit-content;
+  padding: 0px 30px 0px 20px;
+  margin: 6px auto;
+  border-radius: 40px 15px 40px 15px;
+  object-fit: contain;
+  background-image: url("./images/vecteezy_wood-distressed-texture-transparent-background_13869844_933.png");
+  background-size: contain;
+  text-shadow: -2px -2px 5px #000;
+}
+
+.fancy {
+  font-family: "Yellowtail", cursive;
+}
+
+#controls {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+#tempSwitch {
+  margin-bottom: 15px;
+}
+
+#searchBar {
+  display: flex;
+  object-fit: contain;
+  background-image: url("./images/vecteezy_wood-distressed-texture-transparent-background_13869844_933.png");
+  background-size: contain;
+  background-color: var(--nps-brown);
+  width: 100%;
+  height: 75px;
+  margin: 0px auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 50px;
+  text-shadow: -2px -2px 5px #000;
+}
+
+#searchLabel {
+  color: var(--nps-yellow);
+  font-size: 35px;
+  background: none;
+}
+
+#locationSearch {
+  border: solid 1px var(--nps-yellow);
+  border-radius: 20px;
+  padding-left: 10px;
+  color: var(--nps-yellow);
+  font-size: 30px;
+  width: auto;
+  height: 40px;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: -2px -2px 5px #000;
+  text-align: center;
+}
+
+#locationSearch:focus {
+  outline: none;
+}
+
+#current {
+  border-radius: 100px 35px 100px 35px;
+  object-fit: contain;
+  background-image: url("./images/vecteezy_wood-distressed-texture-transparent-background_13869844_933.png");
+  background-size: contain;
+  text-shadow: -2px -2px 5px #000;
+  background-color: var(--nps-brown);
+}
+
+#temperature,
+#condition,
+#wind,
+#precip,
+#forecast {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#temperature,
+#condition,
+#wind,
+#precip {
+  width: 50%;
+  text-align: center;
+}
+
+#current {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  margin: 20px;
+}
+
+#forecast {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+  border-radius: 35px 100px 35px 100px;
+  object-fit: contain;
+  background-image: url("./images/vecteezy_wood-distressed-texture-transparent-background_13869844_933.png");
+  background-size: contain;
+  text-shadow: -2px -2px 5px #000;
+  background-color: var(--nps-brown);
+  margin: 20px;
+  padding-top: 10px;
+}
+
+.forecast-label {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.forecast-day {
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+ul {
+  margin: 10px 0px;
+}
+
+li,
+img,
+span {
+  font-weight: normal;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+ul > li:first-of-type {
+  padding-top: 5px;
+}
+
+button {
+  border-radius: 50px;
+  border-style: none;
+  border: solid 1px var(--nps-yellow);
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  padding-right: 15px;
+  padding-top: -5px;
+  transition: all ease 0.3s;
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: -2px -2px 5px #000;
+}
+
+button:hover {
+  cursor: pointer;
+  scale: 1.1;
+  transition: all ease 0.3s;
+}
+
+button:active {
+  cursor: pointer;
+  scale: 1;
+  transition: all ease 0.3s;
+}
