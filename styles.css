@@ -286,6 +286,7 @@ h1 {
 .forecast-label {
   width: 100%;
   text-align: center;
+  font-weight: bold;
 }
 
 .forecast-day {
