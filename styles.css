@@ -166,9 +166,16 @@ h1 {
   text-shadow: -2px -2px 5px #000;
 }
 
+h1:first-of-type {
+  margin-top: 20px;
+}
+
 .temp-setting {
   color: var(--nps-yellow);
   font-size: 35px;
+}
+
+#greetingsSign {
 }
 
 .switch {
@@ -281,6 +288,10 @@ h1 {
   background-color: var(--nps-brown);
   margin: 20px;
   padding-top: 10px;
+}
+
+#current ul {
+  align-self: center;
 }
 
 .forecast-label {

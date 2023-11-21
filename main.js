@@ -263,10 +263,14 @@ function howzuhUpdate() {
     "UV: " + howzuhData.forecast.dayThree.uv;
   updateDates(false);
   //location display banner
-  document.querySelector(
-    "#greetingsSign"
-  ).innerText = `Greetings from ${howzuhData.location.name}, ${howzuhData.location.region}!`;
-  document.querySelector("#greetingsSign").classList.remove("hidden");
+  let locationDisplay = document.querySelector("#greetingsSign");
+  if (howzuhData.location.region == howzuhData.location.name) {
+    locationDisplay.innerText = `Greetings from ${howzuhData.location.name}, ${howzuhData.location.country}!`;
+    document.querySelector("#greetingsSign").classList.remove("hidden");
+  } else {
+    locationDisplay.innerText = `Greetings from ${howzuhData.location.name}, ${howzuhData.location.region}!`;
+    document.querySelector("#greetingsSign").classList.remove("hidden");
+  }
 }
 
 function updateDates(firstRun) {
